@@ -1,0 +1,11 @@
+#include <iostream>
+#include "Temp.h"
+using namespace std;
+int main()
+{
+    Temperature t;
+    cout<<"Enter temperature in Celsius: ";
+    cin>>t.celsius;
+    t.display();
+    return 0;
+}
