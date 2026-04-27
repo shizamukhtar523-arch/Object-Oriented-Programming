@@ -46,6 +46,8 @@ int main()
     p.setName("Laptop");
     p.setPrice(1200.50);
     p.setQuantity(5);
-    cout << "Product: " << p.getName() << " | Price: $" << p.getPrice() << endl;
+    cout << "Product: " << p.getName() <<endl;
+	cout << "Price: $" << p.getPrice() <<endl;
+	cout << "Quantity:"<<p.getQuantity() <<endl;
     return 0;
 }
