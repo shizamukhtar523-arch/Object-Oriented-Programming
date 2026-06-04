@@ -1,0 +1,36 @@
+VEHICLE RENTAL SYSTEM
+
+Q1. How do you model the three vehicle types?
+
+I used inheritance. Car, Motorbike and Truck are derived classes of Vehicle because they all share common properties such as model name, daily rental rate and availability status. Each derived class also contains type-specific attributes.
+
+Q2. Where does pricing logic live?
+
+Pricing logic is implemented using the virtual function calculateCost() in the Vehicle class. Truck and Motorbike override this function to implement surcharge and discount rules.
+
+Q3. Who owns rental records?
+
+Rental records are managed by the RentalSystem class. This centralizes rental management and keeps Customer and Vehicle classes independent.
+
+Q4. How many classes are used?
+
+Vehicle
+Car
+Motorbike
+Truck
+Customer
+Rental
+RentalSystem
+
+Each class has a single responsibility.
+
+Q5. Where does runtime polymorphism appear?
+
+Runtime polymorphism appears when a Vehicle pointer calls calculateCost().
+
+Example:
+
+Vehicle* v = vehicle;
+double cost = v->calculateCost(days);
+
+The appropriate function executes at runtime depending on whether the object is a Car, Motorbike, or Truck.
